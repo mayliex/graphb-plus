@@ -3,8 +3,8 @@ package example
 import (
 	"testing"
 
+	"github.com/mayliex/graphb-plus"
 	"github.com/stretchr/testify/assert"
-	"github.com/udacity/graphb"
 )
 
 func TestMethodChaining(t *testing.T) {
