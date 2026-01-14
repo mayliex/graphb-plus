@@ -2,6 +2,9 @@
 An extended and maintained version of the original `graphb` library,
 providing additional features and fixes.
 
+## Added functionality
+- support of arguments with different types via `ArgumentAnySlice`
+
 ## graphb: A GraphQL query builder
 __Focus on the query, not string manipulation__
 
