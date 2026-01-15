@@ -4,6 +4,7 @@ providing additional features and fixes.
 
 ## Added functionality
 - support of arguments with different types via `ArgumentAnySlice`
+- added fragment implementation and combined request
 
 ## graphb: A GraphQL query builder
 __Focus on the query, not string manipulation__

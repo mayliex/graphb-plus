@@ -1,6 +1,8 @@
 package graphb
 
 import (
+	"fmt"
+
 	"github.com/pkg/errors"
 )
 
@@ -142,6 +144,10 @@ func MakeField(name string) *Field {
 	return &Field{Name: name}
 }
 
+func MakeFragmentField(name string) *Field {
+	return &Field{Name: fmt.Sprintf("...%s", name)}
+}
+
 // SetArguments sets the arguments of a Field and return the pointer to this Field.
 func (f *Field) SetArguments(arguments ...Argument) *Field {
 	f.Arguments = arguments
@@ -165,9 +171,9 @@ func (f *Field) SetAlias(alias string) *Field {
 	return f
 }
 
-/////////////
+// ///////////
 // Helpers //
-/////////////
+// ///////////
 // reach checks if f1 can be reached by f2 either directly (itself) or indirectly (children)
 func reach(f1, f2 *Field) error {
 	if f1 == nil || f2 == nil {

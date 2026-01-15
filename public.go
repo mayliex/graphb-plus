@@ -116,9 +116,9 @@ func OfName(name string) QueryOption {
 	}
 }
 
-////////////////////////////
+// //////////////////////////
 // fieldContainer Factory //
-////////////////////////////
+// //////////////////////////
 type fieldContainer interface {
 	getFields() []*Field
 	setFields([]*Field)
@@ -154,9 +154,12 @@ func OfField(name string, options ...FieldOptionInterface) FieldContainerOption 
 // Fields takes a list of strings and make them a slice of *Field.
 // This is useful when you want fields with no sub fields.
 // For example:
+//
 //	query { courses { id, key } }
+//
 // can be written as:
-// 	Query{
+//
+//	Query{
 //		Type: "query",
 //		Fields: []*Field{
 //			{
